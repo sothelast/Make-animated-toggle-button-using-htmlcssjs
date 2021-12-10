@@ -29,6 +29,9 @@ body {
     body {
         background-color: rgb(15, 15, 61);
     }
+    .box{
+           height: 90vh;
+    }
 }
 
 .but-fram {
