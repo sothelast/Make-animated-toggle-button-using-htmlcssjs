@@ -1,0 +1,247 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: inter;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.box {
+    width: 400px;
+    max-width: 400px;
+    height: 80%;
+    box-shadow: 0px 0px 20px black;
+    background-color: rgb(15, 15, 61);
+    border-radius: 20px;
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:800px) {
+    body {
+        background-color: rgb(15, 15, 61);
+    }
+}
+
+.but-fram {
+    position: relative;
+    left: 32%;
+    top: -200px;
+    height: 280px;
+    width: 130px;
+    border: 1px solid black;
+    border-radius: 200px;
+    box-shadow: inset 0px 0px 25px black;
+    background-color: rgba(17, 17, 17, .9);
+    padding: 10px;
+}
+
+#so {
+    display: none;
+}
+
+.buttona {
+    width: 100%;
+    height: 150px;
+    box-shadow: 0px 0px 5px rgba(223, 218, 218, .4), inset 0px 0px 5px rgba(223, 218, 218, .4);
+    background-color: rgb(62, 62, 70);
+    border-radius: 200px;
+    cursor: pointer;
+    transition: all .7s;
+    position: relative;
+    transform: translateY(110px);
+    z-index: 10;
+}
+
+#so:checked~.bt .buttona {
+    transform: translateY(0px);
+    transition: all .7s;
+}
+
+#up {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(90deg);
+    top: 30px;
+    font-size: 30px;
+    left: 44%;
+}
+
+#bottom {
+    color: white;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-90deg);
+    bottom: 30px;
+    font-size: 30px;
+    left: 44%;
+}
+
+.mainbox {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.remov {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.parent,
+.child,
+.subchild {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid transparent;
+    border-right: 15px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: ani3 4s ease-out infinite;
+}
+
+@keyframes ani3 {
+    0% {
+        border-right: 15px solid transparent;
+    }
+    20% {
+        border-right: 15px solid transparent;
+    }
+    40% {
+        border-right: 15px solid transparent;
+    }
+    60% {
+        border-right: 15px solid rgba(34, 253, 253, .3);
+    }
+    80% {
+        border-right: 15px solid rgba(34, 253, 253, 1);
+    }
+    100% {
+        border-right: 15px solid transparent;
+    }
+}
+
+.child {
+    width: 80%;
+    height: 80%;
+    animation: ani2 4s ease-out infinite;
+}
+
+@keyframes ani2 {
+    0% {
+        border-right: 15px solid transparent;
+    }
+    20% {
+        border-right: 15px solid transparent;
+    }
+    40% {
+        border-right: 15px solid rgba(34, 253, 253, .3);
+    }
+    60% {
+        border-right: 15px solid rgba(34, 253, 253, 1);
+    }
+    80% {
+        border-right: 15px solid rgba(34, 253, 253, .3);
+    }
+    100% {
+        border-right: 15px solid transparent;
+    }
+}
+
+.subchild {
+    width: 70%;
+    height: 70%;
+    animation: ani1 4s ease-out infinite;
+}
+
+@keyframes ani1 {
+    0% {
+        border-right: 15px solid transparent;
+    }
+    20% {
+        border-right: 15px solid rgba(34, 253, 253, .3);
+    }
+    40% {
+        border-right: 15px solid rgba(34, 253, 253, 1);
+    }
+    60% {
+        border-right: 15px solid rgba(34, 253, 253, .3);
+    }
+    80% {
+        border-right: 15px solid rgba(34, 253, 253, .3);
+    }
+    100% {
+        border-right: 15px solid transparent;
+    }
+}
+
+.fa-power-off {
+    font-size: 30px;
+    color: rgba(63, 238, 238, .5);
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    /* border: 2px solid white; */
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 20px black;
+}
+
+.text {
+    position: absolute;
+    font-size: 30px;
+    width: 100%;
+    height: auto;
+    /* border: 2px solid white; */
+    top: 80px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(245, 243, 243, .8);
+    font-weight: bold;
+}
+
+.text::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 6px;
+    height: 5px;
+    background-color: rgba(82, 240, 240, .6);
+    border-radius: 300px;
+}
+
+#so:checked~.bt .text::after {
+    background-color: aqua;
+    box-shadow: 0px 0px 10px aqua, 0px 0px 20px aqua;
+}
+
+#so:checked~.bt .text {
+    color: white;
+}
+
+.wifi-name {
+    font-size: 32px;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}
