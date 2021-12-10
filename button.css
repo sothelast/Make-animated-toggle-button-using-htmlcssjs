@@ -15,7 +15,7 @@ body {
 .box {
     width: 400px;
     max-width: 400px;
-    height: 80%;
+    height: 90%;
     box-shadow: 0px 0px 20px black;
     background-color: rgb(15, 15, 61);
     border-radius: 20px;
